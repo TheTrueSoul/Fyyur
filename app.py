@@ -110,9 +110,9 @@ class show(db.Model):
     __tablename__ = 'Show'
 
     id = db.Column(db.Integer, primary_key=True)
-    artist_id = db.Column(db.integer, db.ForeignKey(
+    artist_id = db.Column(db.Integer, db.ForeignKey(
         "Artist.id"), nullable=False)
-    venue_id = db.Column(db.integer, db.ForeignKey("Venue.id"), nullable=False)
+    venue_id = db.Column(db.Integer, db.ForeignKey("Venue.id"), nullable=False)
     date = db.Column(db.DateTime, nullable=False)
 
     def show_dict(self):
